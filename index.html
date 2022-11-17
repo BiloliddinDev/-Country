@@ -20,21 +20,31 @@
     <title>Dunyo Shaxarlari</title>
   </head>
   <body>
-    <nav class="header__nav container">
-      <a href="./index.html" class="header__logo">
-        <img
-          class="header__imgs"
-          src="https://cdn.pixabay.com/photo/2016/04/01/22/55/countries-1301799_1280.png"
-          alt=""
-          width="50"
-        />
-        Country
-      </a>
-      <div class="header__box">
-        <input type="search" />
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </div>
-    </nav>
+    <header class="header">
+      <nav class="header__nav container">
+        <a href="./index.html" class="header__logo">
+          <img
+            class="header__imgs"
+            src="https://cdn.pixabay.com/photo/2016/04/01/22/55/countries-1301799_1280.png"
+            alt=""
+            width="50"
+          />
+          Country
+        </a>
+        <div class="header__box">
+          <form id="form" action="#" method="get">
+            <input
+              name="form__input"
+              id="form__input"
+              class="header__input"
+              type="search"
+              placeholder="Search Country"
+            />
+          </form>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </nav>
+    </header>
     <section class="wrapper container"></section>
     <script src="./js/main.js"></script>
   </body>

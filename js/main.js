@@ -1,12 +1,5 @@
-// // Add html document tag
-// const name1 = document.querySelector(".wrapper__heading");
-// const img = document.querySelector(".wrapper__img");
-// const text = document.querySelector(".wrapper__text");
-// const price = document.querySelector(".wrapper__price");
-// const data = document.querySelector(".wrapper__data");
 const card = document.querySelector(".wrapper");
-//add Api urel
-
+const formi = document.getElementById("form");
 const API2 = "https://restcountries.com/v3.1/all";
 
 fetch(API2)
@@ -29,3 +22,24 @@ fetch(API2)
   .catch((err) => {
     console.log(err);
   });
+
+// search function
+{
+  formi["form__input"].addEventListener("input", () => {
+    const inputValue = formi["form__input"].value.toLowerCase();
+    let name = document.querySelectorAll(".wrapper__heading");
+    name.forEach((item) => {
+      if (item.textContent.toLowerCase().includes(inputValue)) {
+        item.parentElement.classList.remove("hidden");
+      } else {
+        item.parentElement.classList.add("hidden");
+      }
+    });
+  });
+}
+
+// Modal
+
+let box = document.querySelectorAll(".wrapper__card");
+
+console.log(box);
